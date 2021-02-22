@@ -1,0 +1,72 @@
+<!-- <div class="ui segment"> -->
+  <div class="ui  dimmer"  [class.active]="loading"  >
+    <div class="ui text loader">Loading</div>
+  </div>
+  <p></p>
+<!-- </div> -->
+
+
+
+
+<div class="jumbotron bg-white" style="text-align: center;">
+  <h1 class="display-4">Corona Covid-19 Tracker</h1>
+  <hr>
+
+  <app-dashboard [tot_confirmed]="tot_confirmed" [tot_active]="tot_active" [tot_recovered]="tot_recovered"
+    [tot_deaths]="tot_deaths"> </app-dashboard>
+
+</div>
+
+<hr>
+<hr>
+
+
+<div class="ui form m-5">
+  <div class="inline fields">
+    <label for="fruit">Select case type : </label>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio"  id="c"  value="c" #c  (click)="updatechart(c)"      name="select_one_at_a_time" checked="">
+        <label  for="c"   >Confirmed</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio"  id="r" value="r"  #r  (click)="updatechart(r)"    name="select_one_at_a_time">
+        <label  for="r"  >Recovered</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" id="a" value="a"  #a  (click)="updatechart(a)"  name="select_one_at_a_time">
+        <label for="a">Active</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" id="d"  value="d" #d  (click)="updatechart(d)"  name="select_one_at_a_time">
+        <label for="d" >Deaths</label>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+
+
+ 
+  <div class="row">
+    <div class="col-lg-7 m-0 p-0">
+      <google-chart [data]="columnChart"></google-chart>
+      <!-- <google-chart [data]="lineChart"></google-chart> -->
+    </div>
+
+    <div class="col-lg-5 p-0 m-0">
+      <google-chart [data]="pieChart"></google-chart>
+    </div>
+
+
+  </div>
+
+  

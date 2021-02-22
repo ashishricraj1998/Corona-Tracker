@@ -1,0 +1,243 @@
+.home-banner-left-container {
+    color: white;
+    z-index: 1;
+    margin: 20px;
+    max-width: 500px;
+  }
+  .home-banner-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    height: 100%;
+    position: absolute;
+  }
+  .home-banner-button {
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid;
+    outline: none;
+    background: none;
+    color: rgb(228, 228, 228);
+    cursor: pointer;
+  }
+  .home-banner-button:hover {
+    border: 1px solid rgb(207, 207, 207);
+    color: black;
+    background-color: rgb(228, 228, 228);
+  }
+  .home-banner-image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    filter: blur(3px) grayscale(20%);
+  }
+  .alternate-colour {
+    background-color: rgb(83, 202, 202); /* 58b3da */
+    width: 100%;
+  }
+  .services-parent-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  .services-header {
+    color: white;
+    max-width: 600px;
+    margin: 20px;
+  }
+  .services-offered-container {
+    display: flex;
+    color: white;
+    text-transform: uppercase;
+    margin: 20px 0px;
+  }
+  .services-container {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .services-button {
+    outline: none;
+    background: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 0px;
+    width: 90px;
+    cursor: pointer;
+  }
+  .services-button:hover {
+    background-color: white;
+    color: rgb(83, 202, 202);
+  }
+  .icon-style {
+    margin: 12px;
+  }
+  .total-care-parent-container {
+    flex-direction: row;
+  }
+  .total-care-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0.5;
+    margin: 20px;
+  }
+  .total-care-description-container {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    flex: 0.45;
+    margin: 20px;
+  }
+  .healthcare-image {
+    width: 80%;
+    object-fit: cover;
+  }
+  .alternate-button-colour {
+    color: rgb(57, 184, 184);
+    border: 1px solid rgb(57, 184, 184);
+  }
+  .alternate-button-colour:hover {
+    color: white;
+    background-color: rgb(57, 184, 184);
+  }
+  .patients-review-container {
+    flex-direction: column;
+  }
+  .patient-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+  }
+  .patient-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0.4;
+    margin: 20px;
+  }
+  .patient-image {
+    width: 100%;
+    object-fit: cover;
+  }
+  .patient-text {
+    display: flex;
+    flex-direction: column;
+    flex: 0.4;
+    margin: 10px;
+  }
+  .signup-container-bg-image {
+    background: url("/assets/stethoscope.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(3px) brightness(50%);
+  }
+  .login-container {
+    color: white;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    max-width: 600px;
+  }
+  @media(max-width:767px) {
+    .patient-container {
+      flex-direction: column;
+    }
+    .total-care-parent-container {
+      flex-direction: column;
+    }
+    .services-offered-container {
+      flex-direction: column;
+    }
+  }
+
+
+  /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+* {
+  margin: 0px;
+  font-family: 'Montserrat';
+}
+h1 {
+  font-size: 44px;
+  font-weight: 600;
+}
+h1, h2, h3, p, button, i, a {
+  margin: 8px;
+  line-height: normal;
+}
+h2 {
+  font-size: 26px;
+  font-weight: 500;
+}
+h3 {
+  font-size: 20px;
+}
+p, span {
+  font-size: 14px;
+}
+a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.section-container {
+  width: auto;
+  display: block;
+  padding: 24px 0px;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+.base-container {
+  display: flex;
+  align-items: center;
+  min-height: 650px;
+  margin: 0px auto;
+}
+.bold-text {
+  font-weight: 600;
+}
+@media(min-width:768px) {
+  h1 {
+    font-size: 60px;
+  }
+  h1, h2, h3, p, button {
+    margin: 12px;
+    line-height: normal;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 23px;
+  }
+  p, span {
+    font-size: 16px;
+  }
+  .section-container {
+    padding: 40px 0px;
+  }
+  .base-container {
+    max-width: 720px;
+  }
+}
+@media(min-width:992px) {
+  .base-container {
+    max-width: 960px;
+  }
+}
+@media(min-width:1200px) {
+  .base-container {
+    max-width: 1140px;
+  }
+}

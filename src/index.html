@@ -6,8 +6,33 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+
+
 </head>
 <body>
+
+
+
+  <li  class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-user-tie" style="color: white;"></i>
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <!-- <a class="dropdown-item" routerLink="user/login">User</a> -->
+        <a class="dropdown-item" routerLink="admin/login">Admin    <i class="fas fa-user-lock"   style="color: black; padding-left: 10px;     font-size: 14px;
+        "     ></i>         </a>
+        <a class="dropdown-item" routerLink="user/login">User    <i class="fas fa-user-check"  style="color: black;    padding-left: 26px;     font-size: 14px;
+        "   ></i>         </a>
+
+    </div>
+</li>
+
+
+
   <app-root></app-root>
 </body>
 </html>

@@ -1,0 +1,76 @@
+<!-- <div class="ui segment"> -->
+  <div class="ui  dimmer"  [class.active]="loading" >
+    <div class="ui text loader">Loading</div>
+  </div>
+  <p></p>
+<!-- </div> -->
+
+
+
+
+<div class="jumbotron bg-white" style="text-align: center;">
+  <h1 class="display-4">Corona Covid-19 Tracker Country Wise</h1>
+  <hr>
+  <hr>
+  <br>
+</div>
+
+<div class="mx-auto">
+
+  <div class="form-group col-lg-6 mx-auto">
+    <label for="selectid">Select Country</label>
+    <select class="form-control" id="selectid" #refinput (change)="update_country(refinput.value)">
+
+      <option value="None"> None</option>
+      <option value="{{country}}" *ngFor="let country of country_array"> {{country}} </option>
+
+    </select>
+  </div>
+
+</div>
+
+<div>
+
+  <app-dashboard [tot_confirmed]="tot_confirmed" [tot_active]="tot_active" [tot_recovered]="tot_recovered"
+    [tot_deaths]="tot_deaths">
+  </app-dashboard>
+
+</div>
+
+<div class="row">
+
+  <div class="col-6 p-2">
+    <google-chart [data]="lineChart"  [data]='datatable'   ></google-chart>
+    <google-chart [data]="columnChart"   [data]='datatable'  ></google-chart>
+  
+  
+  </div>
+  
+  
+  
+  <div class="col-6 ">
+  
+    <table class="table">
+      <thead style="text-align: center;">
+        <tr>
+          <th>Sno.</th>
+          <th>Dates</th>
+          <th>Cases</th>
+        </tr>
+      </thead>
+      <tbody style="text-align: center;">
+        <tr *ngFor="let cs of selected_country_datewise; index as i">
+          <td data-label="Name">{{i+1}}</td>
+          <td data-label="Age">{{cs.date | date}}</td>
+          <td data-label="Job">{{cs.cases}}</td>
+        </tr>
+  
+      </tbody>
+    </table>
+  
+  
+  
+  </div>
+
+
+</div>
